@@ -189,18 +189,19 @@
   .role li{margin-bottom:6px;}
 
   /* ---- Case studies ---- */
-  .case-list{display:flex; flex-direction:column; gap:0;}
-  .case{
-    display:grid; grid-template-columns:0.9fr 1.5fr; gap:28px;
-    padding:28px 0; border-top:1px solid var(--line);
+  .case-list{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(270px, 1fr)); gap:20px;
   }
-  .case:first-child{border-top:none;}
-  @media (max-width:700px){.case{grid-template-columns:1fr; gap:12px;}}
+  .case{
+    display:flex; flex-direction:column;
+    border:1px solid var(--line); border-radius:3px; background:var(--card);
+    padding:22px;
+  }
   .case .tag{font-family:var(--font-mono); font-size:0.75rem; color:var(--accent); margin-bottom:8px; display:block;}
-  .case h3{font-family:var(--font-display); font-size:1.25rem; font-weight:600; margin:0;}
-  .case p{color:var(--ink-soft); line-height:1.65; margin:10px 0 14px; font-size:0.96rem;}
+  .case h3{font-family:var(--font-display); font-size:1.15rem; font-weight:600; margin:0;}
+  .case p{color:var(--ink-soft); line-height:1.6; margin:10px 0 14px; font-size:0.92rem; flex-grow:1;}
   .stack-row{display:flex; flex-wrap:wrap; gap:8px;}
-  .stack-row span{font-size:0.78rem; border:1px solid var(--line); padding:4px 10px; border-radius:2px; color:var(--ink-soft);}
+  .stack-row span{font-size:0.76rem; border:1px solid var(--line); padding:4px 10px; border-radius:2px; color:var(--ink-soft);}
   .case-link{
     display:inline-block; margin-top:12px; font-family:var(--font-mono); font-size:0.78rem;
     color:var(--teal); text-decoration:none; border-bottom:1px solid transparent;
@@ -355,7 +356,7 @@
           <a class="btn ghost" href="Deepika-Bawa-Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
         </div>
         <div class="stat-row">
-          <div class="stat"><b>12+</b><span>Years in Drupal</span></div>
+          <div class="stat"><b>14+</b><span>Years in Drupal</span></div>
           <div class="stat"><b>5</b><span>Enterprise employers</span></div>
           <div class="stat"><b>Acquia</b><span>Certified Developer</span></div>
         </div>
@@ -363,42 +364,39 @@
 
       <div>
         <div class="diagram-wrap">
-          <svg viewBox="0 0 420 300" width="100%" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="420" height="300" fill="none"/>
-            <g stroke="var(--line)" stroke-width="1">
-              <line x1="0" y1="60" x2="420" y2="60"/>
-              <line x1="0" y1="150" x2="420" y2="150"/>
-              <line x1="0" y1="240" x2="420" y2="240"/>
-            </g>
-            <!-- Sitecore -->
-            <rect x="20" y="26" width="120" height="52" fill="none" stroke="var(--ink-soft)" stroke-width="1.2"/>
-            <text x="80" y="48" fill="var(--ink)" font-size="12" font-family="IBM Plex Mono" text-anchor="middle">Sitecore</text>
-            <text x="80" y="64" fill="var(--ink-soft)" font-size="10" font-family="IBM Plex Mono" text-anchor="middle">+ Snowflake</text>
+          <svg viewBox="0 0 460 400" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="460" height="400" fill="none"/>
 
-            <!-- Azure -->
-            <rect x="150" y="116" width="120" height="52" fill="none" stroke="var(--teal)" stroke-width="1.4"/>
-            <text x="210" y="138" fill="var(--teal)" font-size="12" font-family="IBM Plex Mono" text-anchor="middle">Azure Blob</text>
-            <text x="210" y="154" fill="var(--ink-soft)" font-size="10" font-family="IBM Plex Mono" text-anchor="middle">Storage</text>
+            <!-- Vertical timeline spine -->
+            <line x1="70" y1="26" x2="70" y2="372" stroke="var(--line)" stroke-width="1.4"/>
 
-            <!-- Drupal -->
-            <rect x="280" y="206" width="120" height="52" fill="none" stroke="var(--accent)" stroke-width="1.6"/>
-            <text x="340" y="228" fill="var(--accent)" font-size="12" font-family="IBM Plex Mono" text-anchor="middle">Drupal 10</text>
-            <text x="340" y="244" fill="var(--ink-soft)" font-size="10" font-family="IBM Plex Mono" text-anchor="middle">Content platform</text>
+            <!-- Node 1: 2011-2016 -->
+            <circle cx="70" cy="30" r="5" fill="var(--bg)" stroke="var(--ink-soft)" stroke-width="1.6"/>
+            <text x="95" y="26" fill="var(--ink)" font-size="12" font-family="IBM Plex Mono" font-weight="600">2011 – 2016</text>
+            <text x="95" y="42" fill="var(--ink-soft)" font-size="10.5" font-family="IBM Plex Mono">PHP frameworks &amp; CMS</text>
+            <text x="95" y="56" fill="var(--ink-soft)" font-size="9.5" font-family="IBM Plex Mono" opacity="0.85">CakePHP, Magento, WordPress,</text>
+            <text x="95" y="68" fill="var(--ink-soft)" font-size="9.5" font-family="IBM Plex Mono" opacity="0.85">Joomla, Smarty, Drupal</text>
 
-            <path d="M140 60 L150 130" fill="none" stroke="var(--ink-soft)" stroke-width="1" marker-end="url(#arrow)"/>
-            <path d="M270 150 L280 220" fill="none" stroke="var(--teal)" stroke-width="1" marker-end="url(#arrow2)"/>
+            <!-- Node 2: 2017 -->
+            <circle cx="70" cy="126" r="5" fill="var(--bg)" stroke="var(--ink-soft)" stroke-width="1.6"/>
+            <text x="95" y="122" fill="var(--ink)" font-size="12" font-family="IBM Plex Mono" font-weight="600">2017</text>
+            <text x="95" y="138" fill="var(--ink-soft)" font-size="10.5" font-family="IBM Plex Mono">Drupal 7 sites</text>
 
-            <defs>
-              <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-                <path d="M0,0 L8,4 L0,8 Z" fill="var(--ink-soft)"/>
-              </marker>
-              <marker id="arrow2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-                <path d="M0,0 L8,4 L0,8 Z" fill="var(--teal)"/>
-              </marker>
-            </defs>
+            <!-- Node 3: 2018-2021 (merged) -->
+            <circle cx="70" cy="230" r="5" fill="var(--bg)" stroke="var(--teal)" stroke-width="1.8"/>
+            <text x="95" y="226" fill="var(--teal)" font-size="12" font-family="IBM Plex Mono" font-weight="600">2018 – 2021</text>
+            <text x="95" y="242" fill="var(--ink-soft)" font-size="10.5" font-family="IBM Plex Mono">Multisite rollouts &amp; migration</text>
+            <text x="95" y="256" fill="var(--ink-soft)" font-size="9.5" font-family="IBM Plex Mono" opacity="0.85">Nescafé &amp; Starbucks (localization)</text>
+            <text x="95" y="270" fill="var(--ink-soft)" font-size="9.5" font-family="IBM Plex Mono" opacity="0.85">108-site migration: Acquia → Pantheon</text>
+
+            <!-- Node 4: 2024 - Now (current role, highlighted) -->
+            <circle cx="70" cy="350" r="6.5" fill="var(--accent)" stroke="var(--accent)" stroke-width="1.8"/>
+            <text x="95" y="334" fill="var(--accent)" font-size="12" font-family="IBM Plex Mono" font-weight="600">2024 – Now</text>
+            <text x="95" y="350" fill="var(--ink-soft)" font-size="10.5" font-family="IBM Plex Mono">Sitecore → Drupal 10, custom REST APIs</text>
+            <text x="95" y="364" fill="var(--ink-soft)" font-size="9.5" font-family="IBM Plex Mono" opacity="0.85">Tech Lead, SpecialChem</text>
           </svg>
         </div>
-        <p class="diagram-cap">// migration path: legacy CMS → cloud storage → Drupal</p>
+        <p class="diagram-cap">// 14 years: PHP → Drupal 7/8/9/10 → enterprise migrations → custom REST APIs</p>
       </div>
     </div>
   </section>
@@ -407,7 +405,7 @@
     <div class="section-head"><span class="idx">01</span><h2>About</h2></div>
     <div class="about-grid">
       <div>
-        <p>I'm an <strong>Acquia Certified Drupal Developer</strong> with over twelve years leading enterprise-scale Drupal 8, 9, and 10 development for agencies and product teams, including production work for global brands like <strong>Nescafé</strong> and <strong>Starbucks</strong>.</p>
+        <p>I'm an <strong>Acquia Certified Drupal Developer</strong> with over fourteen years leading enterprise-scale Drupal 8, 9, and 10 development for agencies and product teams, including production work for global brands like <strong>Nescafé</strong> and <strong>Starbucks</strong>.</p>
         <p>My focus has narrowed over time to the harder end of the job: migrations. I've led moves from <strong>Sitecore to Drupal 10</strong>, from <strong>Acquia Cloud to Pantheon</strong>, and from <strong>Drupal 8 to 9</strong> for enterprise sites — building the custom modules, migration plugins, and cloud pipelines each one needs, rather than relying on out-of-the-box tooling.</p>
         <p>I currently work as <strong>Tech Lead – Drupal at SpecialChem</strong>, and I'm opening up availability for select freelance Drupal engagements alongside that role.</p>
       </div>
@@ -474,6 +472,7 @@
     <div class="skill-block">
       <h3>integrations</h3>
       <div class="chip-row">
+        <span class="chip core">Custom REST resources</span>
         <span class="chip">GoToWebinar API</span>
         <span class="chip">HubSpot</span>
         <span class="chip">REST</span>
@@ -507,6 +506,7 @@
           <li>Leading migration of enterprise sites from Sitecore to Drupal 10, including taxonomy, content, and media</li>
           <li>Designing custom migration plugins to fetch JSON from Azure Blob Storage and enrich data with Elasticsearch metadata</li>
           <li>Integrating Azure Blob Storage with Drupal media workflows for images, PDFs, and webp derivatives</li>
+          <li>Building a custom module that exposes REST resources so the Next.js frontend can pull specific data directly from Drupal, alongside the main .NET layer (which uses Elasticsearch indexing) for everything else</li>
           <li>Automating deployments with Jenkins pipelines, including build, test, and Drush commands for image derivative regeneration</li>
           <li>Implementing GoToWebinar API workflows for webinar setup, registration, and marketing tool integration</li>
           <li>Mentoring developers and enforcing Drupal best practices and coding standards</li>
@@ -520,6 +520,7 @@
         <h3>Senior Drupal Developer</h3>
         <p class="org">Hogarth</p>
         <ul>
+          <li>Delivered major client projects including Galderma, Cetaphil, Masco, and Chineke, plus a decoupled build with a Next.js frontend</li>
           <li>Led Drupal 8 to 9 migrations for enterprise sites</li>
           <li>Built custom modules to implement business features and integrate APIs</li>
           <li>Mentored team members and conducted code reviews</li>
@@ -534,6 +535,8 @@
         <h3>AL2 Drupal Technology</h3>
         <p class="org">Publicis Sapient</p>
         <ul>
+          <li>Delivered multisite Drupal projects with multiple localizations for global brands, including Nescafé and Starbucks</li>
+          <li>Handled rollouts across the multisite network, coordinating configuration and deployment across markets</li>
           <li>Developed enterprise Drupal platforms, focusing on Drupal 8/9 migrations and custom features</li>
           <li>Supported solution design, architecture, and API development (REST, JSON, SOAP)</li>
           <li>Participated in automated deployment pipelines and Agile ceremonies</li>
@@ -592,7 +595,7 @@
           <h3><a href="https://www.specialchem.com/" target="_blank" rel="noopener" style="color:inherit; text-decoration:none; border-bottom:1px solid var(--line);">SpecialChem</a></h3>
         </div>
         <div>
-          <p>A chemical marketplace platform connecting formulators and suppliers. As Tech Lead – Drupal, I work across a stack that spans Next.js, .NET, and Drupal, with Snowflake and HubSpot integrations, GoToWebinar for webinar workflows, Datadog for performance monitoring, and Azure for deployments and blob-based media delivery.</p>
+          <p>A chemical marketplace platform connecting formulators and suppliers. As Tech Lead – Drupal, I work across a stack that spans Next.js, .NET, and Drupal, with Snowflake and HubSpot integrations, GoToWebinar for webinar workflows, Datadog for performance monitoring, and Azure for deployments and blob-based media delivery. The .NET layer uses Elasticsearch indexing for most of the platform's data; for one part of the project, I built a custom REST module so the Next.js frontend can pull that specific data straight from Drupal.</p>
           <div class="stack-row">
             <span>Next.js</span><span>.NET</span><span>Drupal</span><span>Snowflake</span><span>HubSpot</span><span>GoToWebinar</span><span>Datadog</span><span>Microsoft Azure</span><span>Azure Blob Storage</span>
           </div>
@@ -602,7 +605,7 @@
 
       <div class="case">
         <div>
-          <span class="tag">enterprise build</span>
+          <span class="tag">enterprise build · Hogarth</span>
           <h3><a href="https://www.galderma.com/" target="_blank" rel="noopener" style="color:inherit; text-decoration:none; border-bottom:1px solid var(--line);">Galderma</a></h3>
         </div>
         <div>
@@ -611,6 +614,60 @@
             <span>Drupal</span><span>PHP</span><span>MySQL</span>
           </div>
           <a class="case-link" href="https://www.galderma.com/" target="_blank" rel="noopener">galderma.com ↗</a>
+        </div>
+      </div>
+
+      <div class="case">
+        <div>
+          <span class="tag">enterprise build · Hogarth</span>
+          <h3><a href="https://www.cetaphil.com/us/" target="_blank" rel="noopener" style="color:inherit; text-decoration:none; border-bottom:1px solid var(--line);">Cetaphil</a></h3>
+        </div>
+        <div>
+          <p>Drupal development on the skincare brand's site as part of the Hogarth team, working within the brand's content and design system requirements.</p>
+          <div class="stack-row">
+            <span>Drupal</span><span>PHP</span><span>MySQL</span>
+          </div>
+          <a class="case-link" href="https://www.cetaphil.com/us/" target="_blank" rel="noopener">cetaphil.com/us ↗</a>
+        </div>
+      </div>
+
+      <div class="case">
+        <div>
+          <span class="tag">non-profit · Hogarth</span>
+          <h3><a href="https://www.chineke.org/" target="_blank" rel="noopener" style="color:inherit; text-decoration:none; border-bottom:1px solid var(--line);">Chineke Foundation</a></h3>
+        </div>
+        <div>
+          <p>Drupal development for the foundation supporting Black and ethnically diverse classical musicians, delivered as part of the Hogarth team.</p>
+          <div class="stack-row">
+            <span>Drupal</span><span>PHP</span><span>MySQL</span>
+          </div>
+          <a class="case-link" href="https://www.chineke.org/" target="_blank" rel="noopener">chineke.org ↗</a>
+        </div>
+      </div>
+
+      <div class="case">
+        <div>
+          <span class="tag">decoupled build · Hogarth</span>
+          <h3>Decoupled Next.js Project</h3>
+        </div>
+        <div>
+          <p>Built the Drupal backend for a decoupled site with a Next.js frontend, structuring content and APIs for a headless delivery model — part of Hogarth's move toward decoupled architecture.</p>
+          <div class="stack-row">
+            <span>Drupal</span><span>Next.js</span><span>Headless CMS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div>
+          <span class="tag">enterprise build · Hogarth</span>
+          <h3>Masco</h3>
+        </div>
+        <div>
+          <p>Drupal development for Masco as part of the Hogarth team; the site has not yet gone live.</p>
+          <div class="stack-row">
+            <span>Drupal</span><span>PHP</span><span>MySQL</span>
+          </div>
         </div>
       </div>
 
@@ -642,11 +699,11 @@
 
       <div class="case">
         <div>
-          <span class="tag">enterprise build</span>
+          <span class="tag">enterprise build · Publicis Sapient</span>
           <h3><a href="https://www.nescafe.com/gb" target="_blank" rel="noopener" style="color:inherit; text-decoration:none; border-bottom:1px solid var(--line);">Nescafé New Generation Websites</a></h3>
         </div>
         <div>
-          <p>Built out components using the Paragraphs module, integrated third-party services (TINT, Bazaarvoice, Adimo, Engage), and set up custom XML sitemaps across a single-domain multi-site architecture on ACSF.</p>
+          <p>Built out components using the Paragraphs module, integrated third-party services (TINT, Bazaarvoice, Adimo, Engage), and handled rollouts with multiple localizations across a single-domain multi-site architecture on ACSF.</p>
           <div class="stack-row">
             <span>Drupal 8</span><span>ACSF</span><span>Acquia Lightning</span><span>Acquia BLT</span><span>MySQL</span><span>jQuery</span>
           </div>
@@ -656,11 +713,11 @@
 
       <div class="case">
         <div>
-          <span class="tag">enterprise build</span>
+          <span class="tag">enterprise build · Publicis Sapient</span>
           <h3><a href="https://athome.starbucks.com/" target="_blank" rel="noopener" style="color:inherit; text-decoration:none; border-bottom:1px solid var(--line);">Starbucks At Home</a></h3>
         </div>
         <div>
-          <p>Delivered component development and third-party integrations (TINT, Bazaarvoice, Adimo, Engage, Calieo, Magento) on a multi-site ACSF build, including a custom mega menu — recognized with a client-focused delivery award.</p>
+          <p>Delivered component development and third-party integrations (TINT, Bazaarvoice, Adimo, Engage, Calieo, Magento) across a multisite, multi-localization ACSF build, including a custom mega menu — recognized with a client-focused delivery award.</p>
           <div class="stack-row">
             <span>Drupal 8</span><span>ACSF</span><span>Acquia Lightning</span><span>Acquia BLT</span><span>MySQL</span><span>Magento</span>
           </div>
